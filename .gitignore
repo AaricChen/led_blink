@@ -1,0 +1,25 @@
+# Build outputs
+build/
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.map
+*.hex
+*.bin
+*.list
+*.su
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CubeMX
+*.ioc.bak
