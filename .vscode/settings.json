@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.h": "c"
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
+}

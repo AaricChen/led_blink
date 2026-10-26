@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "bash",
+      "args": ["-lc", "source scripts/env.sh && make -j"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "bash",
+      "args": ["-lc", "source scripts/env.sh && make clean"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Flash (OpenOCD)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source scripts/env.sh && openocd -f openocd.cfg -c \"program build/led_blink.elf verify reset exit\""
+      ],
+      "dependsOn": ["Build"],
+      "problemMatcher": []
+    }
+  ]
+}
